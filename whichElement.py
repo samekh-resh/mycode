@@ -2,20 +2,31 @@
 
 userChoice = 0
 elements = ["air", "water", "fire", "earth"]
+# make a list of questions 
+# what's the logic, make a while loop that increments a counter to iterate through the project
+
 
 def getUserInput():
+
     userInput = 0
     while userInput == 0:
        # global userInput 
-        userInput = int( input("put in a number 1-4: "))
-        #create a function that will change it to a digit if it is one
+       #herman suggests a try except for the error that I will 
+        userInput = input("put in a number 1-4: ")
+        if not userInput.isnumeric():
+            print("that's not a number... use a number..")
+            userInput = 0
 
-        if userInput >= 5:
+        #create a function that will change it to a digit if it is one
+        userInput = int(userInput)
+
+        if userInput >= 5 or userInput == 0:
             print("that's not 1 through 4: ")
             userInput = 0
 
     return userInput
 
+#we could have this number take in a parameter that then references the index on the list. 
 def printQuestion1():
     print("choose a place to go \n kyoshi island \n Air Nomad Temple \n Ba Sing Se \n Spirit World ")
     return getUserInput()
@@ -38,6 +49,7 @@ def printQuestion5():
 
 def main():
     global userChoice
+    #create a while loop, that while userChoice is < 5, we will loop through this. 
     userChoice += printQuestion1()
     #userChoice = getUserInput()
     print(userChoice)
