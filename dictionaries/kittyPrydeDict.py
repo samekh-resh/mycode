@@ -14,18 +14,18 @@ kitty["fave food"] = ["pistachios", "mac and cheese", "gravy.."]
 print(kitty.keys())
 print(kitty["fave food"][2])
 
-def choices():
-    choice = input("which key do you want to access? ")
-    return choice
+#def choices():
+    #choice = input("which key do you want to access? ")
+    #return choice
 
 
-def main():
-    choice = choices()
-    if choice in kitty: 
-        print(kitty[choice])
-        print(f"kitty pryde's power is {kitty[choice]}")
-    else:    
-        print("that wasn't an actual choice...")
-        main()
+#def main():
+    #choice = choices()
+    #if choice in kitty: 
+    #    print(kitty[choice])
+    #    print(f"kitty pryde's power is {kitty[choice]}")
+    #else:    
+    #    print("that wasn't an actual choice...")
+    #    main()
 
-main()
+#main()
