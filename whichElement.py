@@ -5,24 +5,37 @@ elements = ["air", "water", "fire", "earth"]
 # make a list of questions 
 # what's the logic, make a while loop that increments a counter to iterate through the project
 
+def validateNumeric(supposedNum):
+    if not supposedNum.isnumeric():
+            print("that's not a number... use a number..")
+            return 0
+    else:
+        supposedNum = int(supposedNum)
+        if supposedNum >= 5 or supposedNum == 0:
+            print("that's not a number... use a number..")
+            return 0
+        else:
+            return supposedNum
 
 def getUserInput():
-
+    
     userInput = 0
     while userInput == 0:
        # global userInput 
        #herman suggests a try except for the error that I will 
-        userInput = input("put in a number 1-4: ")
-        if not userInput.isnumeric():
-            print("that's not a number... use a number..")
-            userInput = 0
+        numToValidate = input("put in a number 1-4: ")
+        
+        userInput = validateNumeric(numToValidate)
+        #if not userInput.isnumeric():
+            #print("that's not a number... use a number..")
+            #userInput = 0
 
         #create a function that will change it to a digit if it is one
-        userInput = int(userInput)
+        #userInput = int(userInput)
 
-        if userInput >= 5 or userInput == 0:
-            print("that's not 1 through 4: ")
-            userInput = 0
+        #if userInput >= 5 or userInput == 0:
+            #print("that's not 1 through 4: ")
+            #userInput = 0
 
     return userInput
 
@@ -71,7 +84,7 @@ def elementDecider(aNum):
     if aNum <= 10:
         print(elements[0])
     
-    elif aNum < 10 and aNum <= 20:
+    elif aNum > 10 and aNum <= 20:
         print(elements[1])
     
     elif aNum > 20 and aNum <= 30:
