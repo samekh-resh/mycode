@@ -16,6 +16,13 @@ class Player:
 
     def get_dice(self): # returns the dice rolls
         return self.dice
+#gives the payer bad dice that gives them less than 4
+
+class Give_Bad_Die(Player):
+    def cheat(self):
+        for i in len(self.dice):
+            if i >= 4:
+                i -= 3 
 
 # allows user to turn their last roll into a 6
 class Cheat_Swapper(Player):  # inheritance of Player

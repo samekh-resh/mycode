@@ -2,6 +2,7 @@
 
 userChoice = 0
 elements = ["air", "water", "fire", "earth"]
+questions = [
 # make a list of questions 
 # what's the logic, make a while loop that increments a counter to iterate through the project
 
@@ -61,6 +62,11 @@ def printQuestion5():
     return getUserInput()
 
 def main():
+
+    #count = 0 
+    # while count < 5:
+        #print(question[count])
+        # userChoice += getUserChoice
     global userChoice
     #create a while loop, that while userChoice is < 5, we will loop through this. 
     userChoice += printQuestion1()

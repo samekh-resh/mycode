@@ -4,20 +4,24 @@
 from cheatdice import Player
 from cheatdice import Cheat_Swapper
 from cheatdice import Cheat_Loaded_Dice
-
+from cheatdice import Give_Bad_Die
 def main():
 
     # create two cheater objects
     cheater1 = Cheat_Swapper() # ability is to change 3rd dice roll to 6
     cheater2 = Cheat_Loaded_Dice() # increase all rolls by +1 provided they are < 6
+#    cheater3 = Give_Bad_Die()
+#    cheater4 = Player()
 
     # both players take turns
     cheater1.roll()
     cheater2.roll()
-
+#    cheater3.roll()
+#    cheater4.roll()
     # both players use their cheat methods
     cheater1.cheat()
     cheater2.cheat()
+ #   cheater3.cheat()
 
     print(f"Cheater 1 rolled {cheater1.get_dice()}")
     print(f"Cheater 2 rolled {cheater2.get_dice()}")
