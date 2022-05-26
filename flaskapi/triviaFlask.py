@@ -8,16 +8,18 @@ from flask import url_for
 
 app = Flask(__name__)
 
-@app.route("/correct/<word>")
-def correctWord(word):
-    return f"{word} is correct : )"
+#@app.route("/correct/<word>")
+@app.route("/correct")
+def correctWord():
+    return "that answer is correct"
+    #return f"{word} that is correct : )"
 
 @app.route("/userAttempt/<answer>")
 def userAnswer(answer):
     if answer == "blue":
-        return redirect(url_for("correct", word = answer))
+        return redirect(url_for("correct"))
     if answer !=  "blue":
-        return redirect(url_for("/"))
+        return render_template("triviaFlask.html")
 
 
 @app.route("/")
